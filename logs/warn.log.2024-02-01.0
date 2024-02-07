@@ -1,0 +1,611 @@
+[ ERROR] [2024-02-01 21:31:21,942] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException: Parameter specified as non-null is null: method net.mamoe.mirai.contact.Friend.sendMessage, parameter message
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: Parameter specified as non-null is null: method net.mamoe.mirai.contact.Friend.sendMessage, parameter message
+	at net.mamoe.mirai.contact.Friend.sendMessage(Friend.kt)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:73)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 21:33:01,432] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 21:33:06,996] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 21:48:38,067] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 21:48:53,518] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 21:48:56,292] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 21:51:08,948] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 21:51:14,763] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 21:51:16,008] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 21:51:31,260] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.util.concurrent.CancellationException: java.lang.IllegalStateException: Timeout waiting for ConfigPush.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.concurrent.CancellationException: java.lang.IllegalStateException: Timeout waiting for ConfigPush.
+	at net.mamoe.mirai.internal.network.handler.selector.SelectorNetworkHandler.sendAndExpect$suspendImpl(SelectorNetworkHandler.kt:144)
+	at net.mamoe.mirai.internal.network.handler.selector.SelectorNetworkHandler.sendAndExpect(SelectorNetworkHandler.kt)
+	at net.mamoe.mirai.internal.network.handler.NetworkHandler.sendAndExpect$default(NetworkHandler.kt:207)
+	at net.mamoe.mirai.internal.message.protocol.outgoing.MessageProtocolStrategy.sendPacket$suspendImpl(MessageProtocolStrategy.kt:35)
+	at net.mamoe.mirai.internal.message.protocol.outgoing.MessageProtocolStrategy.sendPacket(MessageProtocolStrategy.kt)
+	at net.mamoe.mirai.internal.message.protocol.impl.GeneralMessageSenderProtocol$GeneralMessageSender.sendSinglePacket(GeneralMessageSenderProtocol.kt:109)
+	at net.mamoe.mirai.internal.message.protocol.impl.GeneralMessageSenderProtocol$GeneralMessageSender.sendAllPackets(GeneralMessageSenderProtocol.kt:93)
+	at net.mamoe.mirai.internal.message.protocol.impl.GeneralMessageSenderProtocol$GeneralMessageSender.process(GeneralMessageSenderProtocol.kt:72)
+	at net.mamoe.mirai.internal.message.protocol.outgoing.OutgoingMessageProcessorAdapter.process(OutgoingMessagePipelineProcessor.kt:26)
+	at net.mamoe.mirai.internal.message.protocol.outgoing.OutgoingMessageProcessorAdapter.process(OutgoingMessagePipelineProcessor.kt:20)
+	at net.mamoe.mirai.internal.pipeline.AbstractProcessorPipeline.process$suspendImpl(ProcessorPipeline.kt:287)
+	at net.mamoe.mirai.internal.pipeline.AbstractProcessorPipeline.process(ProcessorPipeline.kt)
+	at net.mamoe.mirai.internal.message.protocol.MessageProtocolFacadeImpl.preprocessAndSendOutgoingImpl(MessageProtocolFacade.kt:361)
+	at net.mamoe.mirai.internal.message.protocol.MessageProtocolFacadeImpl.preprocessAndSendOutgoing(MessageProtocolFacade.kt:345)
+	at net.mamoe.mirai.internal.message.protocol.MessageProtocolFacade$INSTANCE.preprocessAndSendOutgoing(MessageProtocolFacade.kt)
+	at net.mamoe.mirai.internal.contact.AbstractUserKt.sendMessageImpl(AbstractUser.kt:263)
+	at net.mamoe.mirai.internal.contact.FriendImpl.sendMessage(FriendImpl.kt:102)
+	at net.mamoe.mirai.contact.Friend.sendMessage$suspendImpl(Friend.kt:93)
+	at net.mamoe.mirai.contact.Friend.sendMessage(Friend.kt)
+	at net.mamoe.mirai.contact.Friend$sendMessage$3.invoke(Friend.kt)
+	at net.mamoe.mirai.contact.Friend$sendMessage$3.invoke(Friend.kt)
+	at kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$1.invokeSuspend(IntrinsicsJvm.kt:205)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlin.coroutines.ContinuationKt.startCoroutine(Continuation.kt:115)
+	at me.him188.kotlin.jvm.blocking.bridge.internal.RunSuspendKt.$runSuspend$(RunSuspend.kt:18)
+	at net.mamoe.mirai.contact.Friend.sendMessage(Friend.kt)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:95)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+Caused by: java.lang.IllegalStateException: Timeout waiting for ConfigPush.
+	at net.mamoe.mirai.internal.network.components.ConfigPushProcessorImpl.syncConfigPush(ConfigPushProcessor.kt:45)
+	at net.mamoe.mirai.internal.network.components.ConfigPushProcessorImpl$syncConfigPush$1.invokeSuspend(ConfigPushProcessor.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:33)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:33)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:570)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
+[ ERROR] [2024-02-01 22:02:46,377] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at lhe.shinano.bot.AIChatBot.lambda$new$0(AIChatBot.java:33)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:79)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 22:02:54,881] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at lhe.shinano.bot.AIChatBot.lambda$new$0(AIChatBot.java:33)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:79)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 22:04:15,829] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at lhe.shinano.bot.AIChatBot.lambda$new$0(AIChatBot.java:33)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:79)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 22:04:23,701] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at lhe.shinano.bot.AIChatBot.lambda$new$0(AIChatBot.java:33)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:79)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 22:04:26,254] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at lhe.shinano.bot.AIChatBot.lambda$new$0(AIChatBot.java:33)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:79)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 22:05:24,244] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at lhe.shinano.bot.AIChatBot.lambda$new$0(AIChatBot.java:33)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:79)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 22:06:08,969] [ForkJoinPool.commonPool-worker-18] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at lhe.shinano.bot.AIChatBot.lambda$new$0(AIChatBot.java:33)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:79)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 22:12:30,947] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at lhe.shinano.bot.AIChatBot.lambda$new$0(AIChatBot.java:33)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:79)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 22:13:36,927] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at lhe.shinano.bot.AIChatBot.lambda$new$0(AIChatBot.java:33)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:79)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 22:15:15,982] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at lhe.shinano.bot.AIChatBot.lambda$new$0(AIChatBot.java:33)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:79)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 22:15:19,099] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at lhe.shinano.bot.AIChatBot.lambda$new$0(AIChatBot.java:33)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:79)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 22:15:21,519] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at lhe.shinano.bot.AIChatBot.lambda$new$0(AIChatBot.java:33)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:79)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 22:16:38,454] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at lhe.shinano.bot.AIChatBot.lambda$new$0(AIChatBot.java:33)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:79)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+[ ERROR] [2024-02-01 22:20:12,815] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:20:16,726] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:20:17,424] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:20:20,819] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:20:23,998] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:20:41,695] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ WARN ] [2024-02-01 22:20:52,077] [nioEventLoopGroup-2-2] i.n.c.DefaultChannelPipeline -An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.util.concurrent.CancellationException: NetworkHandler closed
+	at kotlinx.coroutines.ExceptionsKt.CancellationException(Exceptions.kt:22)
+	at net.mamoe.mirai.internal.network.handler.NetworkHandlerSupport.close(NetworkHandlerSupport.kt:77)
+	at net.mamoe.mirai.internal.network.handler.CommonNetworkHandler.close(CommonNetworkHandler.kt:179)
+	at net.mamoe.mirai.internal.network.handler.selector.SelectorNetworkHandler.close(SelectorNetworkHandler.kt:119)
+	at net.mamoe.mirai.internal.network.components.BotOfflineEventMonitorImpl.onEvent$closeNetwork(BotOfflineEventMonitor.kt:57)
+	at net.mamoe.mirai.internal.network.components.BotOfflineEventMonitorImpl.onEvent(BotOfflineEventMonitor.kt:92)
+	at net.mamoe.mirai.internal.network.components.BotOfflineEventMonitorImpl.access$onEvent(BotOfflineEventMonitor.kt:42)
+	at net.mamoe.mirai.internal.network.components.BotOfflineEventMonitorImpl$attachJob$$inlined$subscribeAlways$default$1.invokeSuspend(EventChannelKotlinExtensions.kt:175)
+	at net.mamoe.mirai.internal.network.components.BotOfflineEventMonitorImpl$attachJob$$inlined$subscribeAlways$default$1.invoke(EventChannelKotlinExtensions.kt)
+	at net.mamoe.mirai.internal.network.components.BotOfflineEventMonitorImpl$attachJob$$inlined$subscribeAlways$default$1.invoke(EventChannelKotlinExtensions.kt)
+	at net.mamoe.mirai.event.EventChannel$subscribeAlways$1.invokeSuspend(EventChannel.kt:480)
+	at net.mamoe.mirai.event.EventChannel$subscribeAlways$1.invoke(EventChannel.kt)
+	at net.mamoe.mirai.event.EventChannel$subscribeAlways$1.invoke(EventChannel.kt)
+	at net.mamoe.mirai.internal.event.SafeListener$onEvent$2.invokeSuspend(SafeListener.kt:58)
+	at net.mamoe.mirai.internal.event.SafeListener$onEvent$2.invoke(SafeListener.kt)
+	at net.mamoe.mirai.internal.event.SafeListener$onEvent$2.invoke(SafeListener.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:89)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:169)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at net.mamoe.mirai.internal.event.SafeListener.onEvent(SafeListener.kt:58)
+	at net.mamoe.mirai.internal.event.EventListeners.process(EventListeners.kt:114)
+	at net.mamoe.mirai.internal.event.EventListeners.callListeners$mirai_core(EventListeners.kt:79)
+	at net.mamoe.mirai.internal.event.EventChannelImpl.callListeners(EventChannelImpl.kt:85)
+	at net.mamoe.mirai.internal.event.EventChannelImpl.broadcastEventImpl(EventChannelImpl.kt:75)
+	at net.mamoe.mirai.internal.network.components.EventDispatcherImpl.broadcast$suspendImpl(EventDispatcher.kt:99)
+	at net.mamoe.mirai.internal.network.components.EventDispatcherImpl.broadcast(EventDispatcher.kt)
+	at net.mamoe.mirai.internal.network.components.EventDispatcherImpl$broadcastAsync$job$1.invokeSuspend(EventDispatcher.kt:113)
+	at net.mamoe.mirai.internal.network.components.EventDispatcherImpl$broadcastAsync$job$1.invoke(EventDispatcher.kt)
+	at net.mamoe.mirai.internal.network.components.EventDispatcherImpl$broadcastAsync$job$1.invoke(EventDispatcher.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:55)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+	at net.mamoe.mirai.internal.network.components.EventDispatcherImpl.broadcastAsync-kKe4JaQ(EventDispatcher.kt:110)
+	at net.mamoe.mirai.internal.network.components.EventDispatcher.broadcastAsync-kKe4JaQ$default(EventDispatcher.kt:35)
+	at net.mamoe.mirai.internal.network.components.ConfigPushProcessorImpl.syncConfigPush(ConfigPushProcessor.kt:49)
+	at net.mamoe.mirai.internal.network.components.ConfigPushProcessorImpl$syncConfigPush$1.invokeSuspend(ConfigPushProcessor.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:33)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:33)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:570)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
+Caused by: java.lang.IllegalStateException: Timeout waiting for ConfigPush.
+	at net.mamoe.mirai.internal.network.components.ConfigPushProcessorImpl.syncConfigPush(ConfigPushProcessor.kt:45)
+	... 13 common frames omitted
+[ ERROR] [2024-02-01 22:22:06,461] [pool-1-thread-1] l.s.b.AIChatBot -got qq[1786934054] message [你好] but response gpt result [null] error
+org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:6667 [/0.0.0.0] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at lhe.shinano.qq_chat.util.HttpClientUtils.post(HttpClientUtils.java:99)
+	at lhe.shinano.qq_chat.util.GPTInvokeUtil.sendQuestion(GPTInvokeUtil.java:16)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:76)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 17 common frames omitted
+[ ERROR] [2024-02-01 22:22:06,696] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:22:37,808] [pool-1-thread-2] l.s.b.AIChatBot -got qq[1786934054] message [可以帮我个忙不] but response gpt result [null] error
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.conn.LoggingInputStream.read(LoggingInputStream.java:84)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at lhe.shinano.qq_chat.util.HttpClientUtils.post(HttpClientUtils.java:99)
+	at lhe.shinano.qq_chat.util.HttpClientUtils.post(HttpClientUtils.java:108)
+	at lhe.shinano.qq_chat.util.GPTInvokeUtil.sendQuestion(GPTInvokeUtil.java:16)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:76)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[ ERROR] [2024-02-01 22:22:37,949] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:24:05,390] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:24:07,649] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:25:36,287] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:25:37,523] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:26:58,391] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:27:29,482] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:27:38,353] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:33:01,499] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:33:07,615] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:33:12,055] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:33:27,739] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:33:38,807] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:38:05,310] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:38:28,618] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:38:37,887] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:38:50,148] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:42:21,503] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:42:25,402] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:42:42,365] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:42:44,054] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:42:59,797] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:45:59,146] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:46:25,838] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:47:25,287] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:47:32,508] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:47:36,658] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:48:49,393] [pool-1-thread-4] l.s.b.AIChatBot -got qq[1786934054] message [不想和你去] but response gpt result [null] error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.conn.LoggingInputStream.read(LoggingInputStream.java:84)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at lhe.shinano.qq_chat.util.HttpClientUtils.post(HttpClientUtils.java:99)
+	at lhe.shinano.qq_chat.util.HttpClientUtils.post(HttpClientUtils.java:108)
+	at lhe.shinano.qq_chat.util.GPTInvokeUtil.sendQuestion(GPTInvokeUtil.java:16)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:76)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[ ERROR] [2024-02-01 22:48:49,394] [ForkJoinPool.commonPool-worker-18] l.s.b.AIChatBot -error
+java.util.concurrent.CompletionException: java.util.concurrent.CancellationException: java.lang.IllegalStateException: Timeout waiting for ConfigPush.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.concurrent.CancellationException: java.lang.IllegalStateException: Timeout waiting for ConfigPush.
+	at net.mamoe.mirai.internal.network.handler.selector.SelectorNetworkHandler.sendAndExpect$suspendImpl(SelectorNetworkHandler.kt:144)
+	at net.mamoe.mirai.internal.network.handler.selector.SelectorNetworkHandler.sendAndExpect(SelectorNetworkHandler.kt)
+	at net.mamoe.mirai.internal.network.handler.NetworkHandler.sendAndExpect$default(NetworkHandler.kt:207)
+	at net.mamoe.mirai.internal.message.protocol.outgoing.MessageProtocolStrategy.sendPacket$suspendImpl(MessageProtocolStrategy.kt:35)
+	at net.mamoe.mirai.internal.message.protocol.outgoing.MessageProtocolStrategy.sendPacket(MessageProtocolStrategy.kt)
+	at net.mamoe.mirai.internal.message.protocol.impl.GeneralMessageSenderProtocol$GeneralMessageSender.sendSinglePacket(GeneralMessageSenderProtocol.kt:109)
+	at net.mamoe.mirai.internal.message.protocol.impl.GeneralMessageSenderProtocol$GeneralMessageSender.sendAllPackets(GeneralMessageSenderProtocol.kt:93)
+	at net.mamoe.mirai.internal.message.protocol.impl.GeneralMessageSenderProtocol$GeneralMessageSender.process(GeneralMessageSenderProtocol.kt:72)
+	at net.mamoe.mirai.internal.message.protocol.outgoing.OutgoingMessageProcessorAdapter.process(OutgoingMessagePipelineProcessor.kt:26)
+	at net.mamoe.mirai.internal.message.protocol.outgoing.OutgoingMessageProcessorAdapter.process(OutgoingMessagePipelineProcessor.kt:20)
+	at net.mamoe.mirai.internal.pipeline.AbstractProcessorPipeline.process$suspendImpl(ProcessorPipeline.kt:287)
+	at net.mamoe.mirai.internal.pipeline.AbstractProcessorPipeline.process(ProcessorPipeline.kt)
+	at net.mamoe.mirai.internal.message.protocol.MessageProtocolFacadeImpl.preprocessAndSendOutgoingImpl(MessageProtocolFacade.kt:361)
+	at net.mamoe.mirai.internal.message.protocol.MessageProtocolFacadeImpl.preprocessAndSendOutgoing(MessageProtocolFacade.kt:345)
+	at net.mamoe.mirai.internal.message.protocol.MessageProtocolFacade$INSTANCE.preprocessAndSendOutgoing(MessageProtocolFacade.kt)
+	at net.mamoe.mirai.internal.contact.AbstractUserKt.sendMessageImpl(AbstractUser.kt:263)
+	at net.mamoe.mirai.internal.contact.FriendImpl.sendMessage(FriendImpl.kt:102)
+	at net.mamoe.mirai.contact.Friend.sendMessage$suspendImpl(Friend.kt:93)
+	at net.mamoe.mirai.contact.Friend.sendMessage(Friend.kt)
+	at net.mamoe.mirai.contact.Friend$sendMessage$3.invoke(Friend.kt)
+	at net.mamoe.mirai.contact.Friend$sendMessage$3.invoke(Friend.kt)
+	at kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$1.invokeSuspend(IntrinsicsJvm.kt:205)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlin.coroutines.ContinuationKt.startCoroutine(Continuation.kt:115)
+	at me.him188.kotlin.jvm.blocking.bridge.internal.RunSuspendKt.$runSuspend$(RunSuspend.kt:18)
+	at net.mamoe.mirai.contact.Friend.sendMessage(Friend.kt)
+	at lhe.shinano.bot.AIChatBot.lambda$null$1(AIChatBot.java:95)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 common frames omitted
+Caused by: java.lang.IllegalStateException: Timeout waiting for ConfigPush.
+	at net.mamoe.mirai.internal.network.components.ConfigPushProcessorImpl.syncConfigPush(ConfigPushProcessor.kt:45)
+	at net.mamoe.mirai.internal.network.components.ConfigPushProcessorImpl$syncConfigPush$1.invokeSuspend(ConfigPushProcessor.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:33)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:33)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:570)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
+[ ERROR] [2024-02-01 22:49:50,679] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:49:56,405] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:50:06,331] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:50:18,929] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:50:31,129] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:54:38,444] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:54:43,841] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:54:54,949] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:55:04,176] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:55:09,297] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:58:04,849] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ ERROR] [2024-02-01 22:58:15,645] [ForkJoinPool.commonPool-worker-25] l.s.b.AIChatBot -error
+[ WARN ] [2024-02-01 23:06:36,506] [main] o.s.c.a.AnnotationConfigApplicationContext -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resolveLongTimeNoMessageFriend': Unsatisfied dependency expressed through field 'aiChatBot'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aiChatBot' defined in class path resource [lhe/shinano/config/ChatAIBotRunner.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [lhe.shinano.bot.AIChatBot]: Factory method 'aiChatBot' threw exception; nested exception is net.mamoe.mirai.internal.network.auth.ProducerFailureException
+[ ERROR] [2024-02-01 23:06:36,530] [main] o.s.b.SpringApplication -Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resolveLongTimeNoMessageFriend': Unsatisfied dependency expressed through field 'aiChatBot'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aiChatBot' defined in class path resource [lhe/shinano/config/ChatAIBotRunner.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [lhe.shinano.bot.AIChatBot]: Factory method 'aiChatBot' threw exception; nested exception is net.mamoe.mirai.internal.network.auth.ProducerFailureException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:164)
+	at lhe.shinano.qq_chat.QQChatStarter.main(QQChatStarter.java:13)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aiChatBot' defined in class path resource [lhe/shinano/config/ChatAIBotRunner.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [lhe.shinano.bot.AIChatBot]: Factory method 'aiChatBot' threw exception; nested exception is net.mamoe.mirai.internal.network.auth.ProducerFailureException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [lhe.shinano.bot.AIChatBot]: Factory method 'aiChatBot' threw exception; nested exception is net.mamoe.mirai.internal.network.auth.ProducerFailureException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 31 common frames omitted
+Caused by: net.mamoe.mirai.internal.network.auth.ProducerFailureException: null
+	at net.mamoe.mirai.internal.network.auth.CoroutineOnDemandValueScope.receiveOrNull(CoroutineOnDemandValueScope.kt:152)
+	at net.mamoe.mirai.internal.network.auth.AuthControl.acquireAuth(AuthControl.kt:98)
+	at net.mamoe.mirai.internal.network.components.SsoProcessorImpl.login(SsoProcessor.kt:219)
+	at net.mamoe.mirai.internal.network.handler.CommonNetworkHandler$StateConnecting$startState$2.invokeSuspend(CommonNetworkHandler.kt:247)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:570)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
+	Suppressed: net.mamoe.mirai.network.WrongPasswordException: Error(bot=Bot(914577981), code=238, title=禁止登录, message=请使用手Q扫描二维码或短信登录。, errorInfo=)
+	Suppressed: net.mamoe.mirai.internal.network.handler.selector.SelectorRequireReconnectException: null
+Caused by: net.mamoe.mirai.network.WrongPasswordException: Error(bot=Bot(914577981), code=238, title=禁止登录, message=请使用手Q扫描二维码或短信登录。, errorInfo=)
+	at net.mamoe.mirai.internal.network.components.SsoProcessorImpl$SlowLoginImpl.doLogin(SsoProcessor.kt:450)
+	at net.mamoe.mirai.internal.network.components.SsoProcessorImpl$SlowLoginImpl$doLogin$1.invokeSuspend(SsoProcessor.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:33)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	... 5 common frames omitted
+[ WARN ] [2024-02-01 23:08:19,046] [nioEventLoopGroup-2-2] i.n.c.DefaultChannelPipeline -An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.util.concurrent.CancellationException: NetworkHandler closed
+	at kotlinx.coroutines.ExceptionsKt.CancellationException(Exceptions.kt:22)
+	at net.mamoe.mirai.internal.network.handler.NetworkHandlerSupport.close(NetworkHandlerSupport.kt:77)
+	at net.mamoe.mirai.internal.network.handler.CommonNetworkHandler.close(CommonNetworkHandler.kt:179)
+	at net.mamoe.mirai.internal.network.handler.selector.SelectorNetworkHandler.close(SelectorNetworkHandler.kt:119)
+	at net.mamoe.mirai.internal.network.components.BotOfflineEventMonitorImpl.onEvent$closeNetwork(BotOfflineEventMonitor.kt:57)
+	at net.mamoe.mirai.internal.network.components.BotOfflineEventMonitorImpl.onEvent(BotOfflineEventMonitor.kt:92)
+	at net.mamoe.mirai.internal.network.components.BotOfflineEventMonitorImpl.access$onEvent(BotOfflineEventMonitor.kt:42)
+	at net.mamoe.mirai.internal.network.components.BotOfflineEventMonitorImpl$attachJob$$inlined$subscribeAlways$default$1.invokeSuspend(EventChannelKotlinExtensions.kt:175)
+	at net.mamoe.mirai.internal.network.components.BotOfflineEventMonitorImpl$attachJob$$inlined$subscribeAlways$default$1.invoke(EventChannelKotlinExtensions.kt)
+	at net.mamoe.mirai.internal.network.components.BotOfflineEventMonitorImpl$attachJob$$inlined$subscribeAlways$default$1.invoke(EventChannelKotlinExtensions.kt)
+	at net.mamoe.mirai.event.EventChannel$subscribeAlways$1.invokeSuspend(EventChannel.kt:480)
+	at net.mamoe.mirai.event.EventChannel$subscribeAlways$1.invoke(EventChannel.kt)
+	at net.mamoe.mirai.event.EventChannel$subscribeAlways$1.invoke(EventChannel.kt)
+	at net.mamoe.mirai.internal.event.SafeListener$onEvent$2.invokeSuspend(SafeListener.kt:58)
+	at net.mamoe.mirai.internal.event.SafeListener$onEvent$2.invoke(SafeListener.kt)
+	at net.mamoe.mirai.internal.event.SafeListener$onEvent$2.invoke(SafeListener.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:89)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:169)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at net.mamoe.mirai.internal.event.SafeListener.onEvent(SafeListener.kt:58)
+	at net.mamoe.mirai.internal.event.EventListeners.process(EventListeners.kt:114)
+	at net.mamoe.mirai.internal.event.EventListeners.callListeners$mirai_core(EventListeners.kt:79)
+	at net.mamoe.mirai.internal.event.EventChannelImpl.callListeners(EventChannelImpl.kt:85)
+	at net.mamoe.mirai.internal.event.EventChannelImpl.broadcastEventImpl(EventChannelImpl.kt:75)
+	at net.mamoe.mirai.internal.network.components.EventDispatcherImpl.broadcast$suspendImpl(EventDispatcher.kt:99)
+	at net.mamoe.mirai.internal.network.components.EventDispatcherImpl.broadcast(EventDispatcher.kt)
+	at net.mamoe.mirai.internal.network.components.EventDispatcherImpl$broadcastAsync$job$1.invokeSuspend(EventDispatcher.kt:113)
+	at net.mamoe.mirai.internal.network.components.EventDispatcherImpl$broadcastAsync$job$1.invoke(EventDispatcher.kt)
+	at net.mamoe.mirai.internal.network.components.EventDispatcherImpl$broadcastAsync$job$1.invoke(EventDispatcher.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:55)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+	at net.mamoe.mirai.internal.network.components.EventDispatcherImpl.broadcastAsync-kKe4JaQ(EventDispatcher.kt:110)
+	at net.mamoe.mirai.internal.network.components.EventDispatcher.broadcastAsync-kKe4JaQ$default(EventDispatcher.kt:35)
+	at net.mamoe.mirai.internal.network.components.ConfigPushProcessorImpl.syncConfigPush(ConfigPushProcessor.kt:49)
+	at net.mamoe.mirai.internal.network.components.ConfigPushProcessorImpl$syncConfigPush$1.invokeSuspend(ConfigPushProcessor.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:33)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:33)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:570)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
+Caused by: java.lang.IllegalStateException: Timeout waiting for ConfigPush.
+	at net.mamoe.mirai.internal.network.components.ConfigPushProcessorImpl.syncConfigPush(ConfigPushProcessor.kt:45)
+	... 13 common frames omitted
