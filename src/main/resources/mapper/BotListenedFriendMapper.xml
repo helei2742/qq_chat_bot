@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lhe.shinano.qq_chat.mapper.BotListenedFriendMapper">
+
+
+    <select id="batchInsertIgnore" >
+        insert ignore  into
+            t_bot_listened_friend(bot_id, friend_qq)
+        values
+        <foreach collection="list" item="item" separator=",">
+            (#{botId}, #{item})
+        </foreach>
+    </select>
+
+    <select id="insertOrUpdate">
+        insert into
+            t_bot_listened_friend(bot_id, group_number, group_listen_list)
+        values(#{botId}, #{groupNumber}, #{friendQQListStr})
+        on duplicate key update `group_listen_list` = #{friendQQListStr}
+    </select>
+</mapper>
